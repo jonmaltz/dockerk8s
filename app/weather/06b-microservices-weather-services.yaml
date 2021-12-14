@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: weather-services
+  name: weather-services-jon
   # namespace: weather
 spec:
   type: ClusterIP
@@ -19,7 +19,7 @@ kind: Deployment
 metadata:
   labels:
     app: weather-services
-  name: weather-services
+  name: weather-services-jon
   # namespace: weather
 spec:
   replicas: 1
@@ -34,7 +34,7 @@ spec:
       containers:
         - image: brainupgrade/weather-services:2.0.0
           imagePullPolicy: Always
-          name: weather-services
+          name: weather-services-jon
           env:
             - name: spring.application.name
               value: weather-services
