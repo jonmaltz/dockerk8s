@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   labels:
     app: weather
-  name: weather-front
+  name: weather-front-jon
 spec:
   replicas: 1
   selector:
